@@ -27,14 +27,14 @@ const IntroAnimation = ({ onFinish }: IntroAnimationProps) => {
             <AnimatePresence onExitComplete={onFinish}>
                 {visible && (
                     <motion.div
-                        className="fixed inset-0 bg-black flex items-center justify-center z-50"
-                        initial={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5 }}
+                        className="fixed inset-0 z-[9999] bg-black flex items-center justify-center overflow-hidden"
+                        initial={{ y:0 }}
+                        exit={{ y: "-100%", transition: { duration: 1.05, ease: [0.22, 1, 0.36, 1] } }}
                     >
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white">
+                        <motion.h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white"
+                        initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} exit={{opacity:0, y:-20}} transition={{duration:0.12}}>
                             {greetings[index]}
-                        </h1>
+                        </motion.h1>
                     </motion.div>
                 )}
             </AnimatePresence>
