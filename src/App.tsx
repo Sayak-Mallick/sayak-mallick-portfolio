@@ -10,22 +10,28 @@ import Testimonials from "./sections/Testimonials.tsx";
 import Contact from "./sections/Contact.tsx";
 import ParticlesBackground from "./components/ui/ParticlesBackground.tsx";
 import CustomCursor from "./components/ui/CustomCursor.tsx";
+import IntroAnimation from "./components/ui/IntroAnimation.tsx";
+import {useState} from "react";
 
 function App() {
+    const [introDone, setIntroDone] = useState(false);
     return (
-        <div className="relative gradient text-white scroll-smooth">
-            <CustomCursor />
-            <ParticlesBackground />
-            <Navbar />
-            <Home />
-            <About />
-            <Skills />
-            <Projects />
-            <Experience />
-            <Testimonials />
-            <Contact />
-            <Footer />
-        </div>
+        <>
+            {!introDone && <IntroAnimation onFinish={() => setIntroDone(true)} />}
+            <div className="relative gradient text-white scroll-smooth">
+                <CustomCursor/>
+                <ParticlesBackground/>
+                <Navbar/>
+                <Home/>
+                <About/>
+                <Skills/>
+                <Projects/>
+                <Experience/>
+                <Testimonials/>
+                <Contact/>
+                <Footer/>
+            </div>
+        </>
     )
 }
 
