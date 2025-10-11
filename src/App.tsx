@@ -1,12 +1,29 @@
 import './App.css'
+import Navbar from "./components/Navbar.tsx";
+import Footer from "./components/Footer.tsx";
+import About from "./sections/About.tsx";
+import Home from "./sections/Home.tsx";
+import Skills from "./sections/Skills.tsx";
+import Projects from "./sections/Projects.tsx";
+import Experience from "./sections/Experience.tsx";
+import Testimonials from "./sections/Testimonials.tsx";
+import Contact from "./sections/Contact.tsx";
+import ParticlesBackground from "./components/ui/ParticlesBackground.tsx";
 
 function App() {
     return (
-        <>
-            <h1 className="text-3xl text-blue-400 font-bold underline">
-                Hello world!
-            </h1>
-        </>
+        <div className="relative gradient text-white scroll-smooth">
+            <ParticlesBackground />
+            <Navbar />
+            <Home />
+            <About />
+            <Skills />
+            <Projects />
+            <Experience />
+            <Testimonials />
+            <Contact />
+            <Footer />
+        </div>
     )
 }
 
