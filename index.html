@@ -849,6 +849,27 @@
             background: linear-gradient(135deg, #2a1a1a 0%, #1f0d0d 100%);
         }
 
+        /* Screenshot thumbnails */
+        .project-thumb-screen {
+            background: var(--surface2);
+            overflow: hidden;
+        }
+
+        .project-thumb-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+            transition: transform 0.5s ease;
+            filter: brightness(0.82);
+        }
+
+        .project-card:hover .project-thumb-screen img {
+            transform: scale(1.04);
+            filter: brightness(1);
+        }
+
         .project-thumb-icon {
             font-size: 48px;
             opacity: 0.3;
@@ -1543,109 +1564,117 @@
         </div>
 
         <div class="projects-grid">
-            <!-- Large card -->
+            <!-- RolDrive — Large card -->
             <div class="project-card large">
-                <div class="project-thumb project-thumb-1">
-                    <span class="project-thumb-icon">🛍️</span>
+                <div class="project-thumb project-thumb-screen">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fwww.roldrive.com%2F&screenshot=true&meta=false&embed=screenshot.url"
+                        alt="RolDrive — Global Chauffeur Service" loading="lazy"
+                        onerror="this.parentElement.classList.add('project-thumb-1');this.style.display='none'" />
                     <div class="project-tag-row">
-                        <span class="project-tag">React</span>
-                        <span class="project-tag">Redux Toolkit</span>
-                        <span class="project-tag">TanStack Query</span>
+                        <span class="project-tag">React.js</span>
+                        <span class="project-tag">Next.js</span>
+                        <span class="project-tag">SSR</span>
                     </div>
                 </div>
                 <div class="project-info">
-                    <h3 class="project-title">E-Commerce Platform</h3>
+                    <h3 class="project-title">RolDrive</h3>
                     <p class="project-desc">
-                        Full-stack marketplace with real-time inventory,
-                        cart state via Redux Toolkit, and server-state sync
-                        with TanStack Query. shadcn/ui components styled
-                        with Tailwind.
+                        Global chauffeur &amp; luxury car service platform. Led SSR
+                        implementation with Next.js for measurable SEO and page load
+                        improvements. Delivered responsive, cross-device UI bridging
+                        design and backend teams.
                     </p>
                     <div class="project-links">
-                        <a href="#" class="project-link primary">Live Demo ↗</a>
-                        <a href="#" class="project-link">GitHub →</a>
+                        <a href="https://www.roldrive.com/" target="_blank" rel="noopener"
+                            class="project-link primary">Live Site ↗</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Medium card -->
+            <!-- Shraddha Maanu — Medium card -->
             <div class="project-card medium">
-                <div class="project-thumb project-thumb-2">
-                    <span class="project-thumb-icon">📊</span>
+                <div class="project-thumb project-thumb-screen">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fshraddhamaanu.org%2F&screenshot=true&meta=false&embed=screenshot.url"
+                        alt="Shraddha Maanu" loading="lazy"
+                        onerror="this.parentElement.classList.add('project-thumb-2');this.style.display='none'" />
                     <div class="project-tag-row">
-                        <span class="project-tag">TypeScript</span>
-                        <span class="project-tag">Recharts</span>
+                        <span class="project-tag">React.js</span>
+                        <span class="project-tag">Next.js</span>
+                        <span class="project-tag">Tailwind CSS</span>
                     </div>
                 </div>
                 <div class="project-info">
-                    <h3 class="project-title">Analytics Dashboard</h3>
+                    <h3 class="project-title">Shraddha Maanu</h3>
                     <p class="project-desc">
-                        Real-time data visualization dashboard with
-                        WebSocket integration and complex state management
-                        using Redux Toolkit slices.
+                        Responsive NGO / spiritual organisation web presence. Built
+                        performant, accessible UI with clean component architecture and
+                        smooth cross-device experience.
                     </p>
                     <div class="project-links">
-                        <a href="#" class="project-link primary">Live Demo ↗</a>
-                        <a href="#" class="project-link">GitHub →</a>
+                        <a href="https://shraddhamaanu.org/" target="_blank" rel="noopener"
+                            class="project-link primary">Live Site ↗</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Small cards -->
+            <!-- CrowdPullers — Small card -->
             <div class="project-card small">
-                <div class="project-thumb project-thumb-3">
-                    <span class="project-thumb-icon">✅</span>
+                <div class="project-thumb project-thumb-screen">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fwww.crowdpullers.in%2F&screenshot=true&meta=false&embed=screenshot.url"
+                        alt="CrowdPullers — Event Management" loading="lazy"
+                        onerror="this.parentElement.classList.add('project-thumb-3');this.style.display='none'" />
                     <div class="project-tag-row">
+                        <span class="project-tag">React.js</span>
                         <span class="project-tag">Next.js</span>
                     </div>
                 </div>
                 <div class="project-info">
-                    <h3 class="project-title">Task Manager</h3>
+                    <h3 class="project-title">CrowdPullers</h3>
                     <p class="project-desc">
-                        Collaborative task app with drag-and-drop,
-                        optimistic updates, and offline support.
+                        Premier event management &amp; brand activation platform.
+                        Responsive UI with portfolio, services, and contact flows.
                     </p>
                     <div class="project-links">
-                        <a href="#" class="project-link primary">Demo ↗</a>
+                        <a href="https://www.crowdpullers.in/" target="_blank" rel="noopener"
+                            class="project-link primary">Live Site ↗</a>
                     </div>
                 </div>
             </div>
 
+            <!-- Placeholder — coming soon cards -->
             <div class="project-card small">
-                <div class="project-thumb project-thumb-1">
-                    <span class="project-thumb-icon">💬</span>
-                    <div class="project-tag-row">
-                        <span class="project-tag">Socket.io</span>
-                    </div>
+                <div class="project-thumb project-thumb-2"
+                    style="align-items: center; justify-content: center; display: flex">
+                    <span style="
+                font-size: 11px;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                color: var(--text-muted);
+              ">Coming Soon</span>
                 </div>
                 <div class="project-info">
-                    <h3 class="project-title">Chat Application</h3>
+                    <h3 class="project-title">More Projects</h3>
                     <p class="project-desc">
-                        Real-time messaging app with rooms, presence
-                        indicators, and message history.
+                        Additional projects will be added here soon. Stay tuned.
                     </p>
-                    <div class="project-links">
-                        <a href="#" class="project-link primary">Demo ↗</a>
-                    </div>
                 </div>
             </div>
 
             <div class="project-card small">
-                <div class="project-thumb project-thumb-2">
-                    <span class="project-thumb-icon">🔐</span>
-                    <div class="project-tag-row">
-                        <span class="project-tag">Auth.js</span>
-                    </div>
+                <div class="project-thumb project-thumb-1"
+                    style="align-items: center; justify-content: center; display: flex">
+                    <span style="
+                font-size: 11px;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                color: var(--text-muted);
+              ">Coming Soon</span>
                 </div>
                 <div class="project-info">
-                    <h3 class="project-title">Auth Starter Kit</h3>
+                    <h3 class="project-title">More Projects</h3>
                     <p class="project-desc">
-                        Production-ready auth boilerplate with OAuth, JWT,
-                        and role-based access control.
+                        Additional projects will be added here soon. Stay tuned.
                     </p>
-                    <div class="project-links">
-                        <a href="#" class="project-link primary">GitHub ↗</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1664,11 +1693,15 @@
                 <div class="timeline-date">May 2024 — Present</div>
                 <div class="timeline-role">Frontend Developer</div>
                 <div class="timeline-company">Soliva Technologies — Kolkata</div>
-                <p class="timeline-desc">Developed a dynamic affiliate marketing dashboard using React and TypeScript,
-                    enabling real-time insights and campaign performance tracking. Utilized Redux Toolkit for state
-                    management across complex workflows, reducing redundant API calls and improving responsiveness.
-                    Collaborated with PMs and designers to build data-rich UI components using Material UI; streamlined
-                    component architecture with reusable patterns.</p>
+                <p class="timeline-desc">
+                    Developed a dynamic affiliate marketing dashboard using React and
+                    TypeScript, enabling real-time insights and campaign performance
+                    tracking. Utilized Redux Toolkit for state management across complex
+                    workflows, reducing redundant API calls and improving
+                    responsiveness. Collaborated with PMs and designers to build
+                    data-rich UI components using Material UI; streamlined component
+                    architecture with reusable patterns.
+                </p>
                 <div class="timeline-tags">
                     <span class="timeline-tag">React</span>
                     <span class="timeline-tag">TypeScript</span>
@@ -1682,12 +1715,14 @@
                 <div class="timeline-date">April 2023 — April 2024</div>
                 <div class="timeline-role">Frontend Developer</div>
                 <div class="timeline-company">RolDrive</div>
-                <p class="timeline-desc">Developed and enhanced responsive web applications using React.js and Next.js,
-                    ensuring cross-device compatibility and performance. Led SSR implementation to boost page load speed
-                    and
-                    SEO visibility, resulting in measurable improvements across devices. Performed code reviews,
-                    mentored
-                    junior developers, and acted as liaison between design and backend teams.</p>
+                <p class="timeline-desc">
+                    Developed and enhanced responsive web applications using React.js
+                    and Next.js, ensuring cross-device compatibility and performance.
+                    Led SSR implementation to boost page load speed and SEO visibility,
+                    resulting in measurable improvements across devices. Performed code
+                    reviews, mentored junior developers, and acted as liaison between
+                    design and backend teams.
+                </p>
                 <div class="timeline-tags">
                     <span class="timeline-tag">React.js</span>
                     <span class="timeline-tag">Next.js</span>
@@ -1700,13 +1735,16 @@
             <div class="timeline-item">
                 <div class="timeline-date">August 2022 — April 2023</div>
                 <div class="timeline-role">Frontend Developer</div>
-                <div class="timeline-company">Novac Technology Solutions — Chennai</div>
-                <p class="timeline-desc">Built real estate valuation and analytics solutions as part of a 5-person team.
-                    Implemented Zestimate managing 600K+ monthly valuations, cutting review time by 46% and service
-                    provider
-                    costs by 84%. Revamped a legacy SaaS to React 18 + Redux in an 8-month MVP and integrated an
-                    ML-powered
-                    property valuation model.</p>
+                <div class="timeline-company">
+                    Novac Technology Solutions — Chennai
+                </div>
+                <p class="timeline-desc">
+                    Built real estate valuation and analytics solutions as part of a
+                    5-person team. Implemented Zestimate managing 600K+ monthly
+                    valuations, cutting review time by 46% and service provider costs by
+                    84%. Revamped a legacy SaaS to React 18 + Redux in an 8-month MVP
+                    and integrated an ML-powered property valuation model.
+                </p>
                 <div class="timeline-tags">
                     <span class="timeline-tag">React.js</span>
                     <span class="timeline-tag">Next.js</span>
@@ -1853,7 +1891,7 @@
     <!-- FOOTER -->
     <footer>
         <div class="footer-left">
-            © 2026 — Your Name. All rights reserved.
+            © 2026 — Sayak Mallick. All rights reserved.
         </div>
         <div class="footer-right">
             <a href="#hero" class="footer-link">↑ Back to top</a>
