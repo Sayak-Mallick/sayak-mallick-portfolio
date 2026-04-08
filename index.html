@@ -1641,22 +1641,32 @@
                 </div>
             </div>
 
-            <!-- Placeholder — coming soon cards -->
+            <!-- Upstox Live Market Feed — Small card -->
             <div class="project-card small">
-                <div class="project-thumb project-thumb-2"
-                    style="align-items: center; justify-content: center; display: flex">
-                    <span style="
-                font-size: 11px;
-                letter-spacing: 0.12em;
-                text-transform: uppercase;
-                color: var(--text-muted);
-              ">Coming Soon</span>
+                <div class="project-thumb project-thumb-screen">
+                    <img src="/upstox-dashboard.png"
+                        alt="Upstox Live Market Feed — Real-time Dashboard" loading="lazy"
+                        onerror="this.parentElement.classList.add('project-thumb-3');this.style.display='none'" />
+                    <div class="project-tag-row">
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">TypeScript</span>
+                        <span class="project-tag">WebSocket</span>
+                        <span class="project-tag">Protobuf</span>
+                    </div>
                 </div>
                 <div class="project-info">
-                    <h3 class="project-title">More Projects</h3>
+                    <h3 class="project-title">Upstox Live Market Feed</h3>
                     <p class="project-desc">
-                        Additional projects will be added here soon. Stay tuned.
+                        Real-time market data dashboard streaming via Upstox WebSocket V3.
+                        Hand-rolled protobuf decoder (no library), live LTP with sparkline
+                        charts, OHLC stats, Option Greeks, and auto-reconnect — built with
+                        React, TypeScript &amp; Recharts.
                     </p>
+                    <div class="project-links">
+                        <a href="https://github.com/Sayak-Mallick/upstox-live-market-feed" target="_blank" rel="noopener"
+                            class="project-link primary">GitHub ↗</a>
+                        <a href="#" class="project-link">Live Demo ↗</a>
+                    </div>
                 </div>
             </div>
 
